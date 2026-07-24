@@ -1,6 +1,6 @@
 # FLABX Conference
 
-Web estatica para el I Congreso FLABX: Innovacion Docente, Contenidos Digitales e Inteligencia Artificial.
+Web estática para el I Congreso FLABX: Innovación Docente, Contenidos Digitales e Inteligencia Artificial.
 
 ## Vista local
 
