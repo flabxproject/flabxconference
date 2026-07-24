@@ -295,10 +295,12 @@ h3 {
 }
 
 .hero-stage {
+  align-items: stretch;
   display: grid;
   gap: 18px;
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   min-height: 560px;
+  min-width: 0;
   perspective: 900px;
   position: relative;
 }
@@ -316,8 +318,12 @@ h3 {
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.26);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 180px;
-  overflow: hidden;
+  min-width: 0;
+  overflow: clip;
   padding: 28px;
   position: relative;
 }
@@ -334,22 +340,22 @@ h3 {
 .stage-card-main {
   align-self: stretch;
   background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
   grid-row: span 2;
   justify-content: flex-end;
-  min-height: 400px;
-  transform: rotateY(-8deg) rotateX(3deg);
+  min-height: 430px;
+  transform: rotateY(-4deg) rotateX(2deg);
 }
 
 .stage-card-red {
   background: linear-gradient(145deg, rgba(198, 0, 70, 0.92), rgba(198, 0, 70, 0.58));
-  transform: translateY(26px) rotate(3deg);
+  min-height: 205px;
+  transform: translateY(18px) rotate(2deg);
 }
 
 .stage-card-blue {
   background: linear-gradient(145deg, rgba(0, 166, 200, 0.88), rgba(0, 57, 115, 0.68));
-  transform: translateY(-8px) rotate(-2deg);
+  min-height: 205px;
+  transform: translateY(-4px) rotate(-1deg);
 }
 
 .stage-kicker,
@@ -365,9 +371,10 @@ h3 {
 
 .stage-card strong {
   display: block;
-  font-size: clamp(38px, 5vw, 72px);
+  font-size: clamp(32px, 4.15vw, 58px);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 1.02;
+  overflow-wrap: break-word;
   position: relative;
   z-index: 1;
 }
@@ -387,13 +394,16 @@ h3 {
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
   color: var(--uva-blue);
   display: flex;
+  flex-wrap: wrap;
   font-size: 15px;
   font-weight: 900;
   gap: 16px;
-  left: 14%;
+  justify-content: center;
+  left: 7%;
+  line-height: 1.2;
   padding: 16px 22px;
   position: absolute;
-  right: -5%;
+  right: 0;
   text-transform: uppercase;
   top: 48%;
   transform: rotate(-5deg);
@@ -401,7 +411,7 @@ h3 {
 }
 
 .stage-ribbon span {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero-ticker {
