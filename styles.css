@@ -301,7 +301,6 @@ h3 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
   min-height: 560px;
   min-width: 0;
-  perspective: 900px;
   position: relative;
 }
 
@@ -323,7 +322,7 @@ h3 {
   justify-content: center;
   min-height: 180px;
   min-width: 0;
-  overflow: clip;
+  overflow: hidden;
   padding: 28px;
   position: relative;
 }
@@ -343,19 +342,16 @@ h3 {
   grid-row: span 2;
   justify-content: flex-end;
   min-height: 430px;
-  transform: rotateY(-4deg) rotateX(2deg);
 }
 
 .stage-card-red {
   background: linear-gradient(145deg, rgba(198, 0, 70, 0.92), rgba(198, 0, 70, 0.58));
   min-height: 205px;
-  transform: translateY(18px) rotate(2deg);
 }
 
 .stage-card-blue {
   background: linear-gradient(145deg, rgba(0, 166, 200, 0.88), rgba(0, 57, 115, 0.68));
   min-height: 205px;
-  transform: translateY(-4px) rotate(-1deg);
 }
 
 .stage-kicker,
@@ -389,7 +385,7 @@ h3 {
 }
 
 .stage-ribbon {
-  animation: floatRibbon 7s ease-in-out infinite;
+  animation: pulseRibbon 5s ease-in-out infinite;
   background: var(--white);
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
   color: var(--uva-blue);
@@ -398,15 +394,13 @@ h3 {
   font-size: 15px;
   font-weight: 900;
   gap: 16px;
+  grid-column: 1 / -1;
   justify-content: center;
-  left: 7%;
   line-height: 1.2;
+  margin-top: 2px;
   padding: 16px 22px;
-  position: absolute;
-  right: 0;
+  position: relative;
   text-transform: uppercase;
-  top: 48%;
-  transform: rotate(-5deg);
   z-index: 4;
 }
 
@@ -829,14 +823,14 @@ h3 {
   transform: translateY(0);
 }
 
-@keyframes floatRibbon {
+@keyframes pulseRibbon {
   0%,
   100% {
-    transform: rotate(-5deg) translateY(0);
+    transform: translateY(0);
   }
 
   50% {
-    transform: rotate(-3deg) translateY(-14px);
+    transform: translateY(-6px);
   }
 }
 
@@ -906,11 +900,6 @@ h3 {
     min-height: 320px;
   }
 
-  .stage-ribbon {
-    left: 4%;
-    right: 4%;
-  }
-
   .format-grid,
   .topic-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -969,6 +958,7 @@ h3 {
   }
 
   .stage-ribbon {
+    animation: none;
     position: static;
     transform: none;
     width: 100%;
