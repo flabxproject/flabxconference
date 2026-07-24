@@ -354,6 +354,13 @@ h3 {
   min-height: 205px;
 }
 
+.stage-card-gold {
+  background: linear-gradient(145deg, rgba(243, 198, 78, 0.96), rgba(198, 0, 70, 0.62));
+  color: var(--ink);
+  grid-column: 1 / -1;
+  min-height: 150px;
+}
+
 .learning-scene {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -406,6 +413,13 @@ h3 {
 
 .stage-card-main strong {
   font-size: clamp(34px, 3.9vw, 56px);
+  white-space: normal;
+}
+
+.stage-card-red strong,
+.stage-card-blue strong,
+.stage-card-gold strong {
+  font-size: clamp(27px, 3vw, 40px);
   white-space: normal;
 }
 
