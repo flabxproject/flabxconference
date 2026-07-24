@@ -378,6 +378,7 @@ h3 {
 
 .stage-card-main strong {
   font-size: clamp(34px, 3.9vw, 56px);
+  white-space: normal;
 }
 
 .stage-card p {
@@ -910,6 +911,10 @@ h3 {
     font-size: clamp(30px, 5vw, 44px);
   }
 
+  .stage-card-main strong {
+    font-size: clamp(28px, 4.5vw, 38px);
+  }
+
   .stage-card-main {
     min-height: 320px;
   }
@@ -974,6 +979,10 @@ h3 {
   .stage-card strong,
   .stage-card-main strong {
     font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .stage-card-main strong {
+    font-size: clamp(27px, 7.2vw, 34px);
   }
 
   .stage-ribbon {
