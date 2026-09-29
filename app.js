@@ -60,25 +60,3 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => navObserver.observe(section));
-
-const registrationForm = document.querySelector(".registration-form");
-
-if (registrationForm) {
-  const successMessage = registrationForm.querySelector(".form-success");
-  const errorMessage = registrationForm.querySelector(".form-error");
-
-  if (new URLSearchParams(window.location.search).get("registro") === "ok") {
-    successMessage.hidden = false;
-  }
-
-  registrationForm.addEventListener("submit", (event) => {
-    successMessage.hidden = true;
-    errorMessage.hidden = true;
-
-    if (window.location.protocol === "file:") {
-      event.preventDefault();
-      errorMessage.hidden = false;
-      errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-  });
-}

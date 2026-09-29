@@ -268,119 +268,20 @@
             </ul>
           </div>
 
-          <form
-            class="registration-form"
-            action="https://formsubmit.co/flabxproject@gmail.com"
-            method="post"
-          >
-            <input type="hidden" name="_subject" value="Nueva inscripción · I Congreso FLABX" />
-            <input type="hidden" name="_template" value="table" />
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Tu inscripción al I Congreso FLABX se ha registrado correctamente. El congreso se celebrará los días 16 y 17 de noviembre de 2026 en la Universidad de Valladolid, Campus de Segovia, en modalidad presencial y online. Conserva este correo como confirmación. Para cualquier consulta, escribe a flabxproject@gmail.com."
-            />
-            <input
-              type="hidden"
-              name="_next"
-              value="https://flabxproject.github.io/flabxconference/?registro=ok#formulario-inscripcion"
-            />
-            <input
-              type="hidden"
-              name="_url"
-              value="https://flabxproject.github.io/flabxconference/#formulario-inscripcion"
-            />
-            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
-
-            <div class="form-success" role="status" hidden>
-              <strong>Inscripción enviada correctamente.</strong>
-              <span>Gracias. Hemos recibido tus datos para el I Congreso FLABX.</span>
-            </div>
-
-            <div class="form-error" role="alert" hidden>
-              <strong>No se ha podido enviar la inscripción.</strong>
-              <span>
-                Abre el formulario desde la
-                <a href="https://flabxproject.github.io/flabxconference/#formulario-inscripcion">web pública</a>
-                o escribe a
-                <a href="mailto:flabxproject@gmail.com">flabxproject@gmail.com</a>.
-              </span>
-            </div>
-
-            <div class="form-grid">
-              <label class="form-field form-field-wide">
-                <span>Nombre y apellidos para el certificado *</span>
-                <input
-                  type="text"
-                  name="Nombre para el certificado"
-                  autocomplete="name"
-                  required
-                />
-              </label>
-
-              <label class="form-field">
-                <span>Correo electrónico *</span>
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-
-              <label class="form-field">
-                <span>Universidad, centro o entidad *</span>
-                <input type="text" name="Universidad o entidad" autocomplete="organization" required />
-              </label>
-
-              <label class="form-field">
-                <span>Perfil *</span>
-                <select name="Perfil" required>
-                  <option value="" selected disabled>Selecciona una opción</option>
-                  <option>Estudiante de grado</option>
-                  <option>Estudiante de máster</option>
-                  <option>Estudiante de doctorado</option>
-                  <option>Personal docente e investigador</option>
-                  <option>Personal técnico, de gestión y administración</option>
-                  <option>Profesional externo</option>
-                  <option>Otro</option>
-                </select>
-              </label>
-
-              <label class="form-field">
-                <span>Modalidad de asistencia *</span>
-                <select name="Modalidad de asistencia" required>
-                  <option value="" selected disabled>Selecciona una modalidad</option>
-                  <option>Presencial</option>
-                  <option>Online</option>
-                </select>
-              </label>
-
-              <label class="form-field form-field-wide">
-                <span>Tipo de participación *</span>
-                <select name="Tipo de participación" required>
-                  <option value="" selected disabled>Selecciona una opción</option>
-                  <option>Asistente</option>
-                  <option>Ponente o autor/a</option>
-                  <option>Coautor/a</option>
-                  <option>Tallerista / responsable de taller</option>
-                  <option>Organización</option>
-                </select>
-              </label>
-
-              <label class="form-field form-field-wide">
-                <span>Observaciones o necesidades de accesibilidad</span>
-                <textarea name="Observaciones" rows="4"></textarea>
-              </label>
-            </div>
-
-            <label class="consent-field">
-              <input type="checkbox" name="Consentimiento" value="Aceptado" required />
-              <span>
-                Acepto que FLABX Project trate estos datos para gestionar mi inscripción,
-                las comunicaciones del congreso y la emisión del certificado. Los datos se enviarán
-                mediante el servicio FormSubmit y no se utilizarán con fines comerciales. *
-              </span>
-            </label>
-
-            <button class="button form-submit" type="submit">Enviar inscripción gratuita</button>
-            <p class="form-note">Los campos marcados con * son obligatorios.</p>
-          </form>
+          <div class="registration-embed">
+            <iframe
+              title="Formulario de inscripción gratuita al I Congreso FLABX"
+              src="https://form.jotform.com/262715074047052"
+              loading="lazy"
+              allow="geolocation; microphone; camera; fullscreen"
+            ></iframe>
+            <a
+              class="button registration-external"
+              href="https://form.jotform.com/262715074047052"
+              target="_blank"
+              rel="noreferrer"
+            >Abrir formulario en una ventana nueva</a>
+          </div>
         </div>
       </section>
 
