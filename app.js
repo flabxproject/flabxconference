@@ -60,3 +60,10 @@ const navObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => navObserver.observe(section));
+
+const registrationSuccess = document.querySelector(".form-success");
+const params = new URLSearchParams(window.location.search);
+
+if (registrationSuccess && params.get("registro") === "ok") {
+  registrationSuccess.hidden = false;
+}
