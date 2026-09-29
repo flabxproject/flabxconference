@@ -272,19 +272,28 @@
             class="registration-form"
             action="https://formsubmit.co/flabxproject@gmail.com"
             method="post"
+            data-ajax-endpoint="https://formsubmit.co/ajax/flabxproject@gmail.com"
           >
             <input type="hidden" name="_subject" value="Nueva inscripción · I Congreso FLABX" />
             <input type="hidden" name="_template" value="table" />
             <input
               type="hidden"
-              name="_next"
-              value="https://flabxproject.github.io/flabxconference/?registro=ok#inscripcion"
+              name="_url"
+              value="https://flabxproject.github.io/flabxconference/#formulario-inscripcion"
             />
             <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" />
 
             <div class="form-success" role="status" hidden>
               <strong>Inscripción enviada correctamente.</strong>
               <span>Gracias. Hemos recibido tus datos para el I Congreso FLABX.</span>
+            </div>
+
+            <div class="form-error" role="alert" hidden>
+              <strong>No se ha podido enviar la inscripción.</strong>
+              <span>
+                Inténtalo de nuevo en unos minutos o escribe a
+                <a href="mailto:flabxproject@gmail.com">flabxproject@gmail.com</a>.
+              </span>
             </div>
 
             <div class="form-grid">

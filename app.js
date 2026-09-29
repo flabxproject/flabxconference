@@ -61,9 +61,40 @@ const navObserver = new IntersectionObserver(
 
 sections.forEach((section) => navObserver.observe(section));
 
-const registrationSuccess = document.querySelector(".form-success");
-const params = new URLSearchParams(window.location.search);
+const registrationForm = document.querySelector(".registration-form");
 
-if (registrationSuccess && params.get("registro") === "ok") {
-  registrationSuccess.hidden = false;
+if (registrationForm) {
+  const successMessage = registrationForm.querySelector(".form-success");
+  const errorMessage = registrationForm.querySelector(".form-error");
+  const submitButton = registrationForm.querySelector("button[type='submit']");
+
+  registrationForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    successMessage.hidden = true;
+    errorMessage.hidden = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando inscripción...";
+
+    try {
+      const response = await fetch(registrationForm.dataset.ajaxEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(registrationForm),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+
+      registrationForm.reset();
+      successMessage.hidden = false;
+      successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (error) {
+      errorMessage.hidden = false;
+      errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Enviar inscripción gratuita";
+    }
+  });
 }
