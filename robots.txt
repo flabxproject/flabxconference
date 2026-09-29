@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flabxproject.github.io/flabxconference/sitemap.xml
