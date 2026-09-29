@@ -598,7 +598,7 @@ h3 {
 .fee-grid {
   display: grid;
   gap: 22px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   margin: 36px auto 0;
   max-width: 1280px;
 }
@@ -625,8 +625,39 @@ h3 {
   color: var(--uva-red);
   display: block;
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: clamp(44px, 6vw, 82px);
-  line-height: 1;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.08;
+}
+
+.publication-callout {
+  align-items: center;
+  background: var(--uva-blue);
+  color: var(--white);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
+  margin-top: 42px;
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.publication-callout .eyebrow {
+  color: var(--uva-gold);
+  margin-bottom: 8px;
+}
+
+.publication-callout h3 {
+  color: var(--white);
+  font-size: clamp(34px, 4vw, 58px);
+  margin: 0;
+}
+
+.publication-callout > p {
+  border-left: 4px solid var(--uva-gold);
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0;
+  padding-left: 24px;
 }
 
 .fee-card-primary {
@@ -984,9 +1015,17 @@ h3 {
   .exhibition-grid,
   .embed-grid,
   .fee-grid,
+  .publication-callout,
   .submission-grid,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .publication-callout > p {
+    border-left: 0;
+    border-top: 4px solid var(--uva-gold);
+    padding-left: 0;
+    padding-top: 20px;
   }
 
   .event-panel {
