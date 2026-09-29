@@ -191,6 +191,51 @@ a {
   max-width: 1320px;
 }
 
+.deadline-alert {
+  align-items: center;
+  background: var(--uva-gold);
+  box-shadow: 0 18px 46px rgba(0, 18, 48, 0.28);
+  color: var(--uva-blue);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  margin: 0 auto 38px;
+  max-width: 1320px;
+  padding: 18px 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.deadline-alert-label {
+  background: var(--uva-red);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 900;
+  padding: 9px 12px;
+  text-transform: uppercase;
+}
+
+.deadline-alert p {
+  font-size: clamp(18px, 2vw, 25px);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.deadline-alert a {
+  border: 2px solid var(--uva-blue);
+  color: var(--uva-blue);
+  font-weight: 900;
+  padding: 11px 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.deadline-alert a:hover,
+.deadline-alert a:focus-visible {
+  background: var(--uva-blue);
+  color: var(--white);
+}
+
 .eyebrow {
   color: var(--uva-red);
   font-size: 14px;
@@ -1066,6 +1111,23 @@ h3 {
 
   .hero {
     padding-top: 118px;
+  }
+
+  .deadline-alert {
+    align-items: start;
+    grid-template-columns: 1fr;
+    margin-bottom: 34px;
+    padding: 18px;
+  }
+
+  .deadline-alert-label {
+    justify-self: start;
+  }
+
+  .deadline-alert a {
+    text-align: center;
+    white-space: normal;
+    width: 100%;
   }
 
   h1 {
