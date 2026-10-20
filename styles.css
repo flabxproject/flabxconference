@@ -221,7 +221,7 @@ a {
   margin: 0;
 }
 
-.deadline-alert a {
+.deadline-alert > a {
   border: 2px solid var(--uva-blue);
   color: var(--uva-blue);
   font-weight: 900;
@@ -230,8 +230,8 @@ a {
   white-space: nowrap;
 }
 
-.deadline-alert a:hover,
-.deadline-alert a:focus-visible {
+.deadline-alert > a:hover,
+.deadline-alert > a:focus-visible {
   background: var(--uva-blue);
   color: var(--white);
 }
@@ -1213,7 +1213,7 @@ h3 {
     justify-self: start;
   }
 
-  .deadline-alert a {
+  .deadline-alert > a {
     text-align: center;
     white-space: normal;
     width: 100%;
@@ -1281,3 +1281,5 @@ h3 {
     gap: 14px;
   }
 }
+
+.deadline-alert p a { color: inherit; font-weight: 700; text-decoration: underline; }
